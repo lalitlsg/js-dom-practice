@@ -6,11 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    Web page properties
+    <h1 id="myid">Web page properties        <!-- comment node -->
+
+    </h1>
+    <p id="para">paragraph</p>
     <script>
-        console.log(document.URL);
-        console.log(document.doctype);
-        console.log(document.title);    
+        // console.log(document.URL);
+        // console.log(document.doctype);
+        // console.log(document.title);    
+
+        // console.log(document.nodeName);
+        // console.log(document.nodeValue);
+        // console.log(document.nodeType);
+
+        let ele = document.getElementById("myid");
+        // console.log(ele.nodeName);
+        // console.log(ele.nodeValue);
+        // console.log(ele.nodeType);
+
+        // console.log(ele.firstChild.nextSibling);
+        //  console.log(ele.firstChild.nodeName);
+        console.log(ele.firstChild.nodeValue);
+        ele.firstChild.nodeValue = "New Value"
+        // console.log(ele.firstChild.nodeType);
+
+        // console.log(ele.firstChild.nextSibling.nodeName);
+        // console.log(ele.firstChild.nextSibling.nodeValue);
+        // console.log(ele.firstChild.nextSibling.nodeType);
     </script>
 </body>
 </html>
