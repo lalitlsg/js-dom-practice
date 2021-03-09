@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <h1 id="head">Dom Traversal</h1>
+    <p id="para">paragraph</p>
+    <p id="p2">
+        <span>1</span>
+        <span>2</span>
+    </p>
+    
+    <script>
+        let html = document.getElementById("html");
+        // console.log(html.parentNode);
+        // console.log(html.parentElement);
+        let h1 = document.getElementById("head");
+        // console.log(h1.parentNode);
+        // console.log(h1.parentElement);   
+        let body = document.getElementById("body");
+        // console.log(body.childNodes)
+        // console.log(body.children);
+        let para = document.getElementById("para");
+        // console.log(para.childNodes.length);
+        // for(let i of body.children) {
+        //     console.log(i);
+        // }
+        
+    </script>
+</body>
+</html>
