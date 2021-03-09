@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 id="myid">Web page properties        <!-- comment node -->
+    <h1 id="myid" class="sec">Web page properties        <!-- comment node -->
 
     </h1>
     <p id="para">paragraph</p>
@@ -26,13 +26,19 @@
 
         // console.log(ele.firstChild.nextSibling);
         //  console.log(ele.firstChild.nodeName);
-        console.log(ele.firstChild.nodeValue);
-        ele.firstChild.nodeValue = "New Value"
+        // console.log(ele.firstChild.nodeValue);
+        // ele.firstChild.nodeValue = "New Value"
         // console.log(ele.firstChild.nodeType);
 
         // console.log(ele.firstChild.nextSibling.nodeName);
         // console.log(ele.firstChild.nextSibling.nodeValue);
         // console.log(ele.firstChild.nextSibling.nodeType);
-    </script>
+
+        console.log(ele.attributes);
+        console.log(ele.attributes[0].name);
+        console.log(ele.attributes[0].value);
+        // console.log(ele.attributes[1].nodeValue)
+
+</script>
 </body>
 </html>
