@@ -32,6 +32,15 @@
         // console.log(p2.firstChild);
         // console.log(p2.firstElementChild);
         // p2.firstElementChild.textContent = "first";
+        // console.log(p2.lastChild); --console.log behaves differently, instead of printing current last
+        //child it print latest last child which we have set later here --
+        //                                                               |          
+        // console.log(p2.lastElementChild);                             | 
+        // p2.lastChild.textContent = '3'; -------------------------------
+        //to avoid this we can use setTimeout, just tried.
+        // setTimeout(()=>{
+        //     p2.lastChild.textContent = '3';
+        // },1000)
         
     </script>
 </body>
