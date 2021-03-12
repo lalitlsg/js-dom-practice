@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Node Operations
+    <div id="mydiv">
+        <h1 id="head">My Heading</h1>
+    </div>
+    <section id="sec"></section>
+    <script>
+        //append existing node
+        // let head = document.getElementById("head");
+        let sec = document.getElementById("sec");
+        // sec.appendChild(head);
+
+        //create new element and append
+        // let btn = document.createElement('button');
+        // btn.textContent = "Click";
+        // sec.appendChild(btn);
+
+        //create text node and append
+        // let txt = document.createTextNode("Lalit");
+        // sec.appendChild(txt);
+
+        //create comment node and append
+        // let cmt = document.createComment("this is comment");
+        // sec.appendChild(cmt);
+
+        //append text, comment, and element node at once
+
+        // let h2 = document.createElement('h2');
+        // let txt = document.createTextNode("Second Heading");
+        // let cmt = document.createComment("comment");
+        // h2.appendChild(txt);
+        // sec.appendChild(h2);
+        // sec.appendChild(cmt);
+
+        //create document fragment
+        let df = document.createDocumentFragment();
+        let h3  =document.createElement('h3');
+        h3.textContent = "Section Heading"
+        let btn = document.createElement('button');
+        btn.textContent = "Click Me!"
+        df.appendChild(h3);
+        df.appendChild(btn);
+        // console.log(df)
+        sec.appendChild(df);
+        console.log(df);
+        
+    </script>
+</body>
+</html>
