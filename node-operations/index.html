@@ -10,7 +10,13 @@
     <div id="mydiv">
         <h1 id="head">My Heading</h1>
     </div>
-    <section id="sec"></section>
+    <section id="sec">
+        <ul id="list">
+            <li>React</li>
+            <li>Angular</li>
+            <li>VueJS</li>
+        </ul>
+    </section>
     <script>
         //append existing node
         // let head = document.getElementById("head");
@@ -52,14 +58,24 @@
         // console.log(df);
 
         //normalize method
-        sec.appendChild(document.createTextNode('I'));
-        sec.appendChild(document.createTextNode('Like'));
-        sec.appendChild(document.createTextNode('You'));
+        // sec.appendChild(document.createTextNode('I'));
+        // sec.appendChild(document.createTextNode('Like'));
+        // sec.appendChild(document.createTextNode('You'));
 
-        sec.normalize();
-        console.log(sec.childNodes);
+        // sec.normalize();
+        // console.log(sec.childNodes);
 
-        
+        //insertBefore method
+        let list = document.getElementById('list');
+        // let li = document.createElement('li');
+        // li.textContent = "VueJS"
+        // let refNode = list.lastElementChild;
+        // console.log(list.firstElementChild);
+        // list.insertBefore(li, refNode);
+        // list.insertBefore(li,null);
+        let last = list.lastElementChild;
+        let first = list.firstElementChild;
+        list.insertBefore(last, first);
     </script>
 </body>
 </html>
