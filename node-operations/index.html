@@ -11,11 +11,11 @@
         <h1 id="head">My Heading</h1>
     </div>
     <section id="sec">
-        <ul id="list">
+        <!-- <ul id="list">
             <li>React</li>
             <li>Angular</li>
             <li>VueJS</li>
-        </ul>
+        </ul> -->
     </section>
     <script>
         //append existing node
@@ -66,16 +66,28 @@
         // console.log(sec.childNodes);
 
         //insertBefore method
-        let list = document.getElementById('list');
+        // let list = document.getElementById('list');
         // let li = document.createElement('li');
         // li.textContent = "VueJS"
         // let refNode = list.lastElementChild;
         // console.log(list.firstElementChild);
         // list.insertBefore(li, refNode);
         // list.insertBefore(li,null);
-        let last = list.lastElementChild;
-        let first = list.firstElementChild;
-        list.insertBefore(last, first);
+        // let last = list.lastElementChild;
+        // let first = list.firstElementChild;
+        // list.insertBefore(last, first);
+
+        //insertAdjecentElement
+        let mydiv = document.getElementById('mydiv');
+        let head = document.getElementById('head');
+        let span = document.createElement('span');
+        span.textContent = 'My Span';
+        // head.insertAdjacentElement('beforebegin',span);
+        // head.insertAdjacentElement('afterbegin',span);
+        // head.insertAdjacentElement('beforeend',span);
+        head.insertAdjacentElement('afterend',span);
+
+        console.log(mydiv);
     </script>
 </body>
 </html>
