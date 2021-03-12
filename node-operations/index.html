@@ -80,12 +80,18 @@
         //insertAdjecentElement
         let mydiv = document.getElementById('mydiv');
         let head = document.getElementById('head');
-        let span = document.createElement('span');
-        span.textContent = 'My Span';
+        // let span = document.createElement('span');
+        // span.textContent = 'My Span';
         // head.insertAdjacentElement('beforebegin',span);
         // head.insertAdjacentElement('afterbegin',span);
         // head.insertAdjacentElement('beforeend',span);
-        head.insertAdjacentElement('afterend',span);
+        // head.insertAdjacentElement('afterend',span);
+
+        let html = "<span>my html</span>"
+        head.insertAdjacentHTML('beforebegin', html)
+        head.insertAdjacentHTML('afterbegin', html)
+        head.insertAdjacentHTML('beforeend', html)
+        head.insertAdjacentHTML('afterend', html)
 
         console.log(mydiv);
     </script>
