@@ -40,16 +40,25 @@
         // sec.appendChild(cmt);
 
         //create document fragment
-        let df = document.createDocumentFragment();
-        let h3  =document.createElement('h3');
-        h3.textContent = "Section Heading"
-        let btn = document.createElement('button');
-        btn.textContent = "Click Me!"
-        df.appendChild(h3);
-        df.appendChild(btn);
+        // let df = document.createDocumentFragment();
+        // let h3  =document.createElement('h3');
+        // h3.textContent = "Section Heading"
+        // let btn = document.createElement('button');
+        // btn.textContent = "Click Me!"
+        // df.appendChild(h3);
+        // df.appendChild(btn);
         // console.log(df)
-        sec.appendChild(df);
-        console.log(df);
+        // sec.appendChild(df);
+        // console.log(df);
+
+        //normalize method
+        sec.appendChild(document.createTextNode('I'));
+        sec.appendChild(document.createTextNode('Like'));
+        sec.appendChild(document.createTextNode('You'));
+
+        sec.normalize();
+        console.log(sec.childNodes);
+
         
     </script>
 </body>
