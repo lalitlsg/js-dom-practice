@@ -4,9 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .label{
+            color: white;
+        }
+        .next {
+            font-size: 50px;
+            font-weight: 700;
+            border-radius: 30px;
+        }
+    </style>
 </head>
 <body>
-    <p id="para" class="label" title="mypara" style="background-color: red;">My Paragraph</p>
+    <p id="para" class="label next" title="mypara" style="background-color: red;">My Paragraph</p>
     <script>
         //html attribute -> element dom properties
         let p = document.getElementById('para');
@@ -36,9 +46,24 @@
         // console.log(p);
 
         //CSSStyleDeclaration Object
-        p.style.backgroundColor = 'green';
-        p.style.fontSize = '50px';
-        console.log(p.style);
+        // p.style.backgroundColor = 'green';
+        // p.style.fontSize = '50px';
+        // console.log(p.style);
+        // p.className = 'next';
+        // console.log(p);
+
+        //DOMTokenList classList
+        let eleClass = p.classList;
+        // console.log(eleClass.length);
+        // console.log(eleClass.value);
+        // console.log(eleClass.item(0));
+        // eleClass.add('myclass', 'otherclass');
+        // eleClass.remove('myclass', 'otherclass');
+        // eleClass.replace('myclass', 'mynewclass');
+        // console.log(eleClass.contains('myclass'));
+        // eleClass.toggle('myclass');
+        console.log(eleClass);
+
     </script>
 </body>
 </html>
