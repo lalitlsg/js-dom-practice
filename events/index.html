@@ -9,6 +9,7 @@
     <button onclick="show()">click</button>
     <button id="btn">Ping</button>
     <button id="over">overide</button>
+    <button id="event">Event</button>
     <script>
         //Event Binding with HTML Attribute
         function show(){
@@ -24,8 +25,18 @@
 
         //Override event handlers
         let over = document.getElementById('over');
-        over.onclick = show;
-        over.onclick = disp;
+        // over.onclick = show;
+        // over.onclick = disp;
+
+        //addEventListener
+        let eve = document.getElementById('event');
+        // eve.addEventListener('click', function(){alert('event')});
+        eve.addEventListener('mouseover', function(){alert('event')});
+
+        //does not override,execute one by one
+        over.addEventListener('click', show);
+        over.addEventListener('click', disp);
+        
     </script>
 </body>
 </html>
