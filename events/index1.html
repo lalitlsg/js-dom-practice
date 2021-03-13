@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #four{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+        }
+        #three{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(94, 199, 68);
+        }
+        #two{
+            height: 300px;
+            width: 300px;
+            background-color: rgb(158, 40, 132);
+        }
+        #one{
+            height: 400px;
+            width: 400px;
+            background-color: rgb(226, 56, 34);
+        }
+    </style>
+</head>
+<body>
+    Event bubbling and capturing
+    <div id="one">1
+        <div id="two">2
+            <div id="three">3 
+                <div id="four">4</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //Event Bubbling
+        document.getElementById('one').addEventListener('click', ()=>{console.log('1')}, false);
+        document.getElementById('two').addEventListener('click', ()=>{console.log('2')}, false);
+        document.getElementById('three').addEventListener('click', ()=>{console.log('3')}, false);
+        document.getElementById('four').addEventListener('click', ()=>{console.log('4')}, false);
+
+        //Event Capturing
+        // document.getElementById('one').addEventListener('click', ()=>{console.log('1')}, true);
+        // document.getElementById('two').addEventListener('click', ()=>{console.log('2')}, true);
+        // document.getElementById('three').addEventListener('click', ()=>{console.log('3')}, true);
+        // document.getElementById('four').addEventListener('click', ()=>{console.log('4')}, true);
+
+    </script>
+</body>
+</html>
