@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myheading">Heading 1</h1>
+    <img src="acting.jpg" alt="acting" width="30%" height="20%">
+    <img src="images.jpeg" alt="images" width="20%" height="30%">
+    <div>
+        <ul id="myl">
+            <li class="game">Item 1</li>
+            <li class="supergame">Item 2</li>
+            <li class="game-super">Item 3</li>
+            <li class="gamesuper">Item 4</li>
+            <li class="super-game">Item 5</li>
+            <li class="game super">Item 6</li>
+            <li class="super game">Item 7</li>
+            <li class="super">Item 8</li>
+        </ul>
+    </div>
+    <p title="mypara1" class="red black">This is paragraph 1</p>
+    <p title="mypara2" class="red">This is paragraph 2</p>
+    <p title="mypara3" class="black">This is paragraph 3</p>
+    <p title="mypara4" id="book">This is paragraph 4</p>
+    <p>This is paragraph 5</p>
+    <h3 class="red">Heading 3</h3>
+    <h4 id="book">Heading 4</h4>
+
+    <script>
+        //CSS selector DOM
+        
+        //Element Selector
+        // let p = document.querySelectorAll('p');
+        // console.log(p);
+
+        //Group Selector
+        // let grp = document.querySelectorAll('div,p');
+        // console.log(grp);
+
+        //Universal Selector
+        // let uni = document.querySelectorAll('*');
+        // console.log(uni);
+
+        //Class Selector or Style Class
+            
+            //Universal style class
+            // let cls = document.querySelectorAll('.game');
+            // console.log(cls);
+
+            //Element Specific Style Class
+            // let e = document.querySelectorAll('h3.red');
+            // console.log(e);
+
+            //Element Specific Style Class - more specific
+            // let ms = document.querySelectorAll('p.red.black');
+            // console.log(ms);
+
+        //Id Selecctor
+        // let id = document.querySelectorAll('#book');
+        // console.log(id);
+            
+        //Id Selector more specific    
+        // let id = document.querySelectorAll('p#book');
+        // console.log(id);
+
+        //Attribute Selector
+        // let attr = document.querySelectorAll('p[title]');
+        // let attr = document.querySelectorAll('p[title="mypara1"]');
+        // let attr = document.querySelectorAll('img[width="30%"][height="20%"]');
+        // let attr = document.querySelectorAll('[class ~= "game"]');
+        // let attr = document.querySelectorAll('[class |= "game"]');
+        // let attr = document.querySelectorAll('[class ^= "game"]');
+        // let attr = document.querySelectorAll('[class $= "game"]');
+        // let attr = document.querySelectorAll('[class *= "ga"]');
+        // console.log(attr);
+
+        //pseudo classes
+        // let ps = document.querySelectorAll('li:first-child');
+        // let ps = document.querySelectorAll(':first-child');
+        // let ps = document.querySelectorAll('li:last-child');
+        // let ps = document.querySelectorAll('li:nth-child(5)');
+        // let ps = document.querySelectorAll('li:nth-child(even)');
+        // let ps = document.querySelectorAll('li:nth-last-child(1)');
+        // let ps = document.querySelectorAll(':empty');
+        // console.log(ps);
+
+    </script>
+</body>
+</html>
