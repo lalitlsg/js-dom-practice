@@ -4,8 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #three{
+            height: 200px;
+            width: 200px;
+            background-color: rgb(94, 199, 68);
+        }
+        #two{
+            height: 300px;
+            width: 300px;
+            background-color: rgb(158, 40, 132);
+        }
+        #one{
+            height: 400px;
+            width: 400px;
+            background-color: rgb(226, 56, 34);
+        }
+    </style>
 </head>
 <body>
-    <script></script>
+    stopPropagation and stopImmediatePropagation
+    <div id="one" >1
+        <div id="two" >2
+            <div id="three" >3 
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('one').addEventListener('click', function(e){
+            this.style.backgroundColor = 'orange';
+        });
+        document.getElementById('two').addEventListener('click', function(e){
+            this.style.width = '400px';
+            // e.stopPropagation();
+            e.stopImmediatePropagation();
+        });
+        document.getElementById('two').addEventListener('click', function(e){
+            this.style.backgroundColor = 'blue';
+        });
+        document.getElementById('three').addEventListener('click', function(e){
+            this.style.borderRadius = '10px';
+        });
+
+    </script>
 </body>
 </html>
