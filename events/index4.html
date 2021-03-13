@@ -84,18 +84,31 @@
         // 4.focusout - bubble up
 
         let f = document.getElementById('inp');
-        f.addEventListener('focus', (e)=>{
-            console.log(e.type)
-        });
-        f.addEventListener('focusin', (e)=>{
-            console.log(e.type)
-        });
-        f.addEventListener('blur', (e)=>{
-            console.log(e.type)
-        });
-        f.addEventListener('focusout', (e)=>{
-            console.log(e.type)
-        });
+        // f.addEventListener('focus', (e)=>{
+        //     console.log(e.type)
+        // });
+        // f.addEventListener('focusin', (e)=>{
+        //     console.log(e.type)
+        // });
+        // f.addEventListener('blur', (e)=>{
+        //     console.log(e.type)
+        // });
+        // f.addEventListener('focusout', (e)=>{
+        //     console.log(e.type)
+        // });
+
+        //key events
+        // 1.keydown 
+        // 2.keypress - only works with printable characters
+        // 3.keyup
+        
+        const show = (e) => {
+            console.log(`${e.type}-${e.keyCode}-${String.fromCharCode(e.keyCode)}`);
+        }
+
+        f.addEventListener('keydown', show);
+        f.addEventListener('keypress', show);
+        f.addEventListener('keyup', show);
     </script>
 </body>
 </html>
