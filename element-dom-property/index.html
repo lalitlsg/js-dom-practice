@@ -10,11 +10,16 @@
     <script>
         //html attribute -> element dom properties
         let p = document.getElementById('para');
-        console.log(p.id);
-        console.log(p.className);
-        console.log(p.title);
-        p.title = 'your-para';
-        console.log(p);
+        // console.log(p.id);
+        // console.log(p.className);
+        // console.log(p.title);
+        // p.title = 'your-para';
+        // console.log(p);
+
+        //attributes property
+        console.log(p.attributes);
+        console.log(p.attributes[0]);
+        console.log(p.attributes['id']);
     </script>
 </body>
 </html>
