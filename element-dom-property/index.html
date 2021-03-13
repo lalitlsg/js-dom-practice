@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-    <p id="para" class="label next" title="mypara" style="background-color: red;">My Paragraph</p>
+    <p id="para"  title="mypara" style="background-color: red;color: white !important;">My Paragraph</p>
     <script>
         //html attribute -> element dom properties
         let p = document.getElementById('para');
@@ -53,7 +53,7 @@
         // console.log(p);
 
         //DOMTokenList classList
-        let eleClass = p.classList;
+        // let eleClass = p.classList;
         // console.log(eleClass.length);
         // console.log(eleClass.value);
         // console.log(eleClass.item(0));
@@ -62,8 +62,22 @@
         // eleClass.replace('myclass', 'mynewclass');
         // console.log(eleClass.contains('myclass'));
         // eleClass.toggle('myclass');
-        console.log(eleClass);
+        // console.log(eleClass);
 
-    </script>
+        //CSSStyleDeclaration object methods & properties
+        // CSSStyleDeclaration object used by 2 apis
+        // 1. HTMLElement.style
+        // 2. window.getComputedStyle()
+
+        // let cs = p.style;
+        // cs.cssText = 'font-size:50px;font-weight:700';
+        // console.log(cs.cssText);
+        // console.log(cs.length);
+        // console.log(cs.item(0));
+        // console.log(cs.getPropertyValue('color'));
+        // cs.removeProperty('color');
+        // cs.setProperty('color', 'white','important');
+        // console.log(cs.getPropertyPriority('color'));
+    </script> 
 </body>
 </html>
