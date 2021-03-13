@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mydiv{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(119, 119, 214);
+        }
+        #card{
+            width: 200px;
+            height: 200px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    Mouse Events
+    <div id="mydiv">Click</div>
+    <div id="card" style="display: none;">Card</div>
+    <script>
+        //mouse events
+        //note: mouseenter & mouseleave does not bubble up
+
+        // 1.mousedown
+        // 2.mouseup
+        // 3.click
+        // 4.dblclick
+        // 5.mouseenter - does not bubble up
+        // 6.mouseleave - doen not bubble up
+        // 7.mouseover - bubble up
+        // 8.mouseout - bubble up
+
+        let mydiv = document.getElementById('mydiv');
+        mydiv.addEventListener('mousedown', (e)=>{
+            console.log(e.type);
+        });
+        mydiv.addEventListener('mouseup', (e)=>{
+            console.log(e.type);
+        });
+        mydiv.addEventListener('click', (e)=>{
+            console.log(e.type);
+        });
+        mydiv.addEventListener('dblclick', (e)=>{
+            console.log(e.type);
+        });
+        mydiv.addEventListener('mouseenter', (e)=>{
+            console.log(e.type);
+        });
+        mydiv.addEventListener('mouseleave', (e)=>{
+            console.log(e.type);
+        });
+        mydiv.addEventListener('mouseover', (e)=>{
+            let card = document.getElementById('card');
+            card.style.display = 'block';
+            card.addEventListener('mouseover', function(){
+                this.style.display = 'block';
+            })
+            card.addEventListener('mouseout', function(){
+                this.style.display = 'none';
+            })
+            console.log(e.type);
+        });
+        mydiv.addEventListener('mouseout', (e)=>{
+            card.style.display = 'none';
+            console.log(e.type);
+        });
+        mydiv.addEventListener('mousemove', (e)=>{
+            console.log(e.type);
+        });
+        mydiv.addEventListener('contextmenu', (e)=>{
+            console.log(e.type);
+        });
+    </script>
+</body>
+</html>
