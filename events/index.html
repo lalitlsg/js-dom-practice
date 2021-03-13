@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="show()">click</button>
+    <button id="btn">Ping</button>
+    <button id="over">overide</button>
+    <script>
+        //Event Binding with HTML Attribute
+        function show(){
+            alert('Hi');
+        }
+
+        //Event binding with javascript
+        function disp(){
+            alert('ping')
+        }
+        let btn = document.getElementById('btn');
+        btn.onclick = disp;
+
+        //Override event handlers
+        let over = document.getElementById('over');
+        over.onclick = show;
+        over.onclick = disp;
+    </script>
+</body>
+</html>
