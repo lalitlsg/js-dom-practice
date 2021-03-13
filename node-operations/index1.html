@@ -33,10 +33,15 @@
         // mylist.innerText = 'Test'
         // console.log(mylist.innerText);
         // console.log(mydiv);
-        document.write("hmm")
-        document.writeln("His");
-        document.writeln("yep");
+        // document.write("hmm")
+        // document.writeln("His");
+        // document.writeln("yep");
 
+        //copy node
+        // let dup = mylist.cloneNode(false);
+        let dup = mylist.cloneNode(true);
+        mydiv.appendChild(dup);
+        console.log(dup);
     </script>
 </body>
 </html>
