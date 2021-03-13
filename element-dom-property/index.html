@@ -16,7 +16,7 @@
     </style>
 </head>
 <body>
-    <p id="para"  title="mypara" style="background-color: red;color: white !important;">My Paragraph</p>
+    <p id="para"  class="next" title="mypara" style="background-color: red;color: white !important;">My Paragraph</p>
     <script>
         //html attribute -> element dom properties
         let p = document.getElementById('para');
@@ -78,6 +78,11 @@
         // cs.removeProperty('color');
         // cs.setProperty('color', 'white','important');
         // console.log(cs.getPropertyPriority('color'));
+
+        // Computed style
+        // compute style = inline + internal + external style
+        // let cds = window.getComputedStyle(p); - only read not write
+        // console.log(cds);
     </script> 
 </body>
 </html>
