@@ -6,19 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <ul id="mylist">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-    </ul>
+    <div id="mydiv">
+        <ul id="mylist">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
     <script>
         let mylist = document.getElementById("mylist");
+        let mydiv = document.getElementById('mydiv');
+        //innerHTML
         // console.log(mylist)
         // console.log(mylist.innerHTML)
         // mylist.innerHTML = '';
-        mylist.innerHTML = '<li>New</li>';
-        console.log(mylist)
+        // mylist.innerHTML = '<li>New</li>';
+        // console.log(mylist)
+
+        //outerHTML
+        // mylist.outerHTML = '';
+        mylist.outerHTML = '<p>Para</p>';
+        console.log(mydiv);
     </script>
 </body>
 </html>
