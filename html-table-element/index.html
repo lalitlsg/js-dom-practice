@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1 id="name">Lalit <span>Garghate </span><em>Wadner</em></h1>
     <table id="mytab" border="1">
         <!-- <caption>Table Caption</caption> -->
         <thead>
@@ -65,7 +66,7 @@
         // console.log(mytab.rows);
         
         //HTMLTableRowElement
-        let r = mytab.rows[0];
+        // let r = mytab.rows[0];
         // console.log(r.cells);
         // console.log(r.cells.length);
         // console.log(r.cells[2]);
@@ -74,6 +75,14 @@
         // r.insertCell().textContent = 'New';
         // r.deleteCell(0);
 
+        //textContent
+        let name = document.getElementById('name');
+        // console.log(name.textContent);
+        // console.log(name);
+
+        //innerHtml
+        // name.innerHTML = "<em>you are awesome</em>"
+        
     </script>
 </body>
 </html>
