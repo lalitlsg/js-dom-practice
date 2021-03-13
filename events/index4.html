@@ -21,6 +21,8 @@
     Mouse Events
     <div id="mydiv">Click</div>
     <div id="card" style="display: none;">Card</div>
+    <br />
+    <input type="text" id="inp">
     <script>
         //mouse events
         //note: mouseenter & mouseleave does not bubble up
@@ -73,6 +75,26 @@
         });
         mydiv.addEventListener('contextmenu', (e)=>{
             console.log(e.type);
+        });
+
+        //focus events
+        // 1.focus - does not bubble up 
+        // 2.blur - does not bubble up
+        // 3.focusin - bubble up
+        // 4.focusout - bubble up
+
+        let f = document.getElementById('inp');
+        f.addEventListener('focus', (e)=>{
+            console.log(e.type)
+        });
+        f.addEventListener('focusin', (e)=>{
+            console.log(e.type)
+        });
+        f.addEventListener('blur', (e)=>{
+            console.log(e.type)
+        });
+        f.addEventListener('focusout', (e)=>{
+            console.log(e.type)
         });
     </script>
 </body>
