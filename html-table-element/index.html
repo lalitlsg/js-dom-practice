@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="mytab" border="1">
+        <caption>Table Caption</caption>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Cource</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Lalit</td>
+                <td>Javascript</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Nikhil</td>
+                <td>React</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">footer</td>
+            </tr>
+        </tfoot>
+    </table>
+    <script>
+        let mytab =document.getElementById('mytab');
+        // console.log(mytab.caption.innerHTML);
+        // mytab.caption.innerHTML = "Caption Change";
+        // console.log(mytab.tHead.innerHTML);
+        // mytab.tHead.innerHTML = "<tr><th>no</th><th>firstname</th><th>language</th></tr>"
+        // console.log(mytab.tFoot)
+        // console.log(mytab.tBodies[0]);
+    </script>
+</body>
+</html>
