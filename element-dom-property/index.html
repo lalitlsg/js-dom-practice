@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <p id="para" class="label" title="mypara">My Paragraph</p>
+    <p id="para" class="label" title="mypara" style="background-color: red;">My Paragraph</p>
     <script>
         //html attribute -> element dom properties
         let p = document.getElementById('para');
@@ -31,9 +31,14 @@
         // console.log(p);
 
         //removeAttribute & hasAttribute
-        console.log(p.hasAttribute('id'));
-        p.removeAttribute('class');
-        console.log(p);
+        // console.log(p.hasAttribute('id'));
+        // p.removeAttribute('class');
+        // console.log(p);
+
+        //CSSStyleDeclaration Object
+        p.style.backgroundColor = 'green';
+        p.style.fontSize = '50px';
+        console.log(p.style);
     </script>
 </body>
 </html>
