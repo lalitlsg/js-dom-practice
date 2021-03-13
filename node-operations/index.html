@@ -87,13 +87,20 @@
         // head.insertAdjacentElement('beforeend',span);
         // head.insertAdjacentElement('afterend',span);
 
-        let html = "<span>my html</span>"
-        head.insertAdjacentHTML('beforebegin', html)
-        head.insertAdjacentHTML('afterbegin', html)
-        head.insertAdjacentHTML('beforeend', html)
-        head.insertAdjacentHTML('afterend', html)
+        // let html = "<span>my html</span>"
+        // head.insertAdjacentHTML('beforebegin', html)
+        // head.insertAdjacentHTML('afterbegin', html)
+        // head.insertAdjacentHTML('beforeend', html)
+        // head.insertAdjacentHTML('afterend', html)
 
+
+        let mytxt = "Lalit Text";
+        head.insertAdjacentText('beforebegin', mytxt);
+        head.insertAdjacentText('afterbegin', mytxt);
+        head.insertAdjacentText('beforeend', mytxt);
+        head.insertAdjacentText('afterend', mytxt);
         console.log(mydiv);
+
     </script>
 </body>
 </html>
