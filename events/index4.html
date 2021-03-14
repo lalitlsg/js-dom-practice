@@ -102,13 +102,19 @@
         // 2.keypress - only works with printable characters
         // 3.keyup
         
-        const show = (e) => {
-            console.log(`${e.type}-${e.keyCode}-${String.fromCharCode(e.keyCode)}`);
-        }
+        // const show = (e) => {
+        //     console.log(`${e.type}-${e.keyCode}-${String.fromCharCode(e.keyCode)}`);
+        // }
 
-        f.addEventListener('keydown', show);
-        f.addEventListener('keypress', show);
-        f.addEventListener('keyup', show);
+        // f.addEventListener('keydown', show);
+        // f.addEventListener('keypress', show);
+        // f.addEventListener('keyup', show);
+
+        //Text event
+        const print = (e) => {
+            console.log(`${e.type} ${e.data}`);
+        }
+        f.addEventListener('textInput', print);
     </script>
 </body>
 </html>
