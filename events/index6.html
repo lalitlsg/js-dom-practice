@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #card{
+            width: 200px;
+            height: 200px;
+            box-shadow: 5px 5px 3px rgba(0,0,0,0.3);
+            border: 1px solid gray;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="card"></div>
+    <button id="clear">Clear</button>
+    <script>
+
+        //setTimeout & clearTimeout
+        let timeoutId = setTimeout((name)=>{
+            let card = document.getElementById('card');
+            card.textContent = name;
+            card.style.display = 'block';
+        },3000,'lalit');
+        
+        document.getElementById('clear').addEventListener('click', ()=>{
+            clearTimeout(timeoutId);
+        })
+    </script>
+</body>
+</html>
