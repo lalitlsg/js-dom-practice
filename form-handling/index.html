@@ -24,6 +24,17 @@
         // console.log(document.myform.elements['user']);
         // console.log(document.myform.user);
 
+        //form validation
+        let username = document.myform.user;
+        const validate = () => {
+            console.log(username.value);
+            let regx = /^([^0-9\W]*)$/;
+             if(!regx.test(username.value)) {
+            console.log('Space and nos not allowed')
+         }
+        }
+        username.addEventListener('keyup', validate);
+
     </script>
 </body>
 </html>
