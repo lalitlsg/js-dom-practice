@@ -7,7 +7,8 @@
 </head>
 <body>
     Window object
-
+    <button id="clk">click</button>
+    <button id="close">Close</button>
     <script>
         // outer/inner -> width/height  
         // console.log(`OuterWidth : ${window.outerWidth}`);
@@ -21,6 +22,19 @@
         // console.log(res);
         // let res = prompt('Enter Age',10);
         // console.log(res);
+
+        //open and close method
+        let newW;
+        document.getElementById('clk').addEventListener('click', ()=>{
+            // newW = window.open('https://lalitlsg.netlify.app/', "_blank", "height=400,width=600");
+            newW = window.open("", "",  "height=400,width=600");
+            newW.document.write("New Window");
+        })
+
+        document.getElementById('close').addEventListener('click', ()=>{
+            newW.document.close();
+            newW.close();
+        })
     </script>
 </body>
 </html>
