@@ -11,6 +11,8 @@
     <button id="close">Close</button>
     <button id="focus">Focus</button>
     <button id="blur">Blur</button>
+    <button id="by">Move By</button>
+    <button id="to">Move To</button>
     <script>
         // outer/inner -> width/height  
         // console.log(`OuterWidth : ${window.outerWidth}`);
@@ -44,10 +46,12 @@
         // })
 
         //focus and blur window
-        // let w;
-        // document.getElementById('clk').addEventListener('click', ()=>{
-        //     w = window.open('https://lalitlsg.netlify.app/', "_blank", "height=400,width=600");
-        // })
+        let w;
+        document.getElementById('clk').addEventListener('click', ()=>{
+            // w = window.open('https://lalitlsg.netlify.app/', "_blank", "height=400,width=600");
+            w = window.open("", "",  "height=400,width=600");
+            w.document.write("New Window");
+        })
         // document.getElementById('focus').addEventListener('click', ()=>{
         //     w.focus();
         // })
@@ -55,7 +59,16 @@
         //     w.blur();
         // })
 
+        //moving window
+        document.getElementById('by').addEventListener('click', ()=>{
+            w.moveBy(200, 200);
+            w.focus();
+        })
 
+        document.getElementById('to').addEventListener('click', ()=>{
+            w.moveTo(200,200);
+            w.focus();
+        })
     </script>
 </body>
 </html>
