@@ -20,14 +20,23 @@
     <script>
 
         //setTimeout & clearTimeout
-        let timeoutId = setTimeout((name)=>{
-            let card = document.getElementById('card');
-            card.textContent = name;
-            card.style.display = 'block';
-        },3000,'lalit');
+        // let timeoutId = setTimeout((name)=>{
+        //     let card = document.getElementById('card');
+        //     card.textContent = name;
+        //     card.style.display = 'block';
+        // },3000,'lalit');
         
+        // document.getElementById('clear').addEventListener('click', ()=>{
+        //     clearTimeout(timeoutId);
+        // })
+
+        //setInterval & clearInterval
+        let intervalId = setInterval((name)=>{
+            console.log(name);
+        }, 2000, 'lalit');
+
         document.getElementById('clear').addEventListener('click', ()=>{
-            clearTimeout(timeoutId);
+            clearInterval(intervalId);
         })
     </script>
 </body>
