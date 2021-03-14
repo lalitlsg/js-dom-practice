@@ -7,15 +7,23 @@
 </head>
 <body>
     <form name="myform" id="form">
-        <input type="text" placeholder="name">
-        <input type="password" placeholder="pass">
+        <input type="text" placeholder="name" name="user" id="user">
+        <input type="password" placeholder="pass" name="pass" id="pass">
         <input type="submit" value="Submit">
     </form>
     <script>
+        //accessing form
         // console.log(document.forms[0]);
         // console.log(document.forms['myform']);
         // console.log(document.myform);
         // console.log(document.getElementById('form'));
+
+        //accessing form fields
+        // console.log(document.getElementById('user').name);
+        // console.log(document.myform.elements[0]);
+        // console.log(document.myform.elements['user']);
+        // console.log(document.myform.user);
+
     </script>
 </body>
 </html>
