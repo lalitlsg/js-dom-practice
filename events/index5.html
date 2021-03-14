@@ -7,8 +7,10 @@
 </head>
 <body>
     Window object
-    <button id="clk">click</button>
+    <button id="clk">Open</button>
     <button id="close">Close</button>
+    <button id="focus">Focus</button>
+    <button id="blur">Blur</button>
     <script>
         // outer/inner -> width/height  
         // console.log(`OuterWidth : ${window.outerWidth}`);
@@ -24,17 +26,36 @@
         // console.log(res);
 
         //open and close method
-        let newW;
-        document.getElementById('clk').addEventListener('click', ()=>{
-            // newW = window.open('https://lalitlsg.netlify.app/', "_blank", "height=400,width=600");
-            newW = window.open("", "",  "height=400,width=600");
-            newW.document.write("New Window");
-        })
+        // let newW;
+        // document.getElementById('clk').addEventListener('click', ()=>{
+        //     // newW = window.open('https://lalitlsg.netlify.app/', "_blank", "height=400,width=600");
+        //     newW = window.open("", "",  "height=400,width=600");
+        //     newW.document.write("New Window");
+        // })
 
-        document.getElementById('close').addEventListener('click', ()=>{
-            newW.document.close();
-            newW.close();
-        })
+        // document.getElementById('close').addEventListener('click', ()=>{
+        //     newW.document.close();
+        //     newW.close();
+        // })
+
+        //print method
+        // document.getElementById('clk').addEventListener('click',()=>{
+        //     window.print();
+        // })
+
+        //focus and blur window
+        // let w;
+        // document.getElementById('clk').addEventListener('click', ()=>{
+        //     w = window.open('https://lalitlsg.netlify.app/', "_blank", "height=400,width=600");
+        // })
+        // document.getElementById('focus').addEventListener('click', ()=>{
+        //     w.focus();
+        // })
+        // document.getElementById('blur').addEventListener('click', ()=>{
+        //     w.blur();
+        // })
+
+
     </script>
 </body>
 </html>
