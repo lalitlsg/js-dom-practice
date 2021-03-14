@@ -13,6 +13,9 @@
     <button id="blur">Blur</button>
     <button id="by">Move By</button>
     <button id="to">Move To</button>
+    <button id="resby">Resize By</button>
+    <button id="resto">Resize To</button>
+
     <script>
         // outer/inner -> width/height  
         // console.log(`OuterWidth : ${window.outerWidth}`);
@@ -60,15 +63,25 @@
         // })
 
         //moving window
-        document.getElementById('by').addEventListener('click', ()=>{
-            w.moveBy(200, 200);
-            w.focus();
-        })
+        // document.getElementById('by').addEventListener('click', ()=>{
+        //     w.moveBy(200, 200);
+        //     w.focus();
+        // })
 
-        document.getElementById('to').addEventListener('click', ()=>{
-            w.moveTo(200,200);
-            w.focus();
-        })
+        // document.getElementById('to').addEventListener('click', ()=>{
+        //     w.moveTo(200,200);
+        //     w.focus();
+        // })
+
+        //resize window
+        // document.getElementById('resby').addEventListener('click', ()=>{
+        //     w.resizeBy(50,50);
+        //     w.focus();
+        // })
+        // document.getElementById('resto').addEventListener('click', ()=>{
+        //     w.resizeTo(50,50);
+        //     w.focus();
+        // })
     </script>
 </body>
 </html>
