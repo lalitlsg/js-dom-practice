@@ -73,24 +73,79 @@
         // console.log('end');
 
 
-        //promice example
+        //promice examples
 
-        const po = new Promise((resolve, reject)=>{
-            let req = false;
-            if(req){
-                resolve('Success');
-            } else {
-                reject('Failed');
-            }
-        });
+        // 1
+        // const po = new Promise((resolve, reject)=>{
+        //     let req = false;
+        //     if(req){
+        //         resolve('Success');
+        //     } else {
+        //         reject('Failed');
+        //     }
+        // });
+        // po.then(
+        //     (value)=>console.log(value),
+        //     (error)=>console.log(error)
+        // )
 
-        po.then(
-            (value)=>console.log(value),
-            (error)=>console.log(error)
-        )
+        // 2 
+        // const po = new Promise((resolve, reject)=>{
+        //     let req = false;
+        //     if(req){
+        //         resolve('Success');
+        //     } else {
+        //         reject('Failed');
+        //     }
+        // }).then(value=>console.log(value))
+        //   .catch(error=>console.log(error))
+        //   .finally(()=>console.log('clean up'));
+
+        // 3 
+        // const myprom = new Promise((resolve, reject)=>{
+        //     let n = 10;
+        //     resolve(10);
+        // }).then(value => {
+        //     console.log(value);
+        //     return value + 10;
+        // }).then(value=>console.log(value));
 
         //promices to avoid callback hell
 
+        const getName = (name) => {
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve(name);
+                },2000);
+            });
+        }
+
+        const getCources = (name) => {
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve(['React', 'Angular', 'Vue']);
+                },2000);
+            });
+        }
+
+        const selectedCource = (cources) => {
+            return new Promise((resolve, reject)=>{
+                setTimeout(()=>{
+                    resolve(cources[0]);
+                },2000);
+            });
+        }
+
+        getName('lalit')
+            .then(name=>{
+                console.log(name);
+                return getCources(name);
+            })
+            .then(cources=>{
+                console.log(cources);
+                return selectedCource(cources);
+            })
+            .then(mycource=>console.log(mycource));
 
     </script>
 </body>
