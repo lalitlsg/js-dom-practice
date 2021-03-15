@@ -136,16 +136,33 @@
             });
         }
 
-        getName('lalit')
-            .then(name=>{
+        // getName('lalit')
+        //     .then(name=>{
+        //         console.log(name);
+        //         return getCources(name);
+        //     })
+        //     .then(cources=>{
+        //         console.log(cources);
+        //         return selectedCource(cources);
+        //     })
+        //     .then(mycource=>console.log(mycource));
+
+        // async/await 
+
+        const getResult = async() => {
+            try {
+                let name = await getName('lalit');
                 console.log(name);
-                return getCources(name);
-            })
-            .then(cources=>{
+                let cources = await getCources(name);
                 console.log(cources);
-                return selectedCource(cources);
-            })
-            .then(mycource=>console.log(mycource));
+                let selected = await selectedCource(cources);
+                console.log(selected);
+            } catch (error) {
+                console.log(error)
+            }
+        }
+
+        getResult();
 
     </script>
 </body>
