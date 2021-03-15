@@ -39,39 +39,59 @@
         // console.log('end');
 
         //callback hell
+        // console.log('start');
+        // const getName = (name, callback) => {
+        //     setTimeout(()=>{
+        //         console.log('Inside name setTimeout');
+        //         callback(name);
+        //     },2000);
+        // }
 
-        console.log('start');
-        const getName = (name, callback) => {
-            setTimeout(()=>{
-                console.log('Inside name setTimeout');
-                callback(name);
-            },2000);
-        }
+        // const getCources = (name, callback) => {
+        //     setTimeout(()=>{
+        //         console.log('Inside cources setTimeout');
+        //         callback(['React', 'Angular', 'Vue']);
+        //     },2000);
+        // }
 
-        const getCources = (name, callback) => {
-            setTimeout(()=>{
-                console.log('Inside cources setTimeout');
-                callback(['React', 'Angular', 'Vue']);
-            },2000);
-        }
+        // const selectedCource = (cources,callback) => {
+        //     setTimeout(()=>{
+        //         console.log('Inside selected setTimeout');
+        //         callback(cources[0]);
+        //     },2000);
+        // }
 
-        const selectedCource = (cources,callback) => {
-            setTimeout(()=>{
-                console.log('Inside selected setTimeout');
-                callback(cources[0]);
-            },2000);
-        }
+        // getName('lalit', (name)=>{
+        //     console.log('Name:', name);
+        //     getCources(name, (cources)=>{
+        //         console.log('Cources', cources);
+        //         selectedCource(cources, (sc)=>{
+        //             console.log('Selcted Cource', sc);
+        //         })
+        //     });
+        // });
+        // console.log('end');
 
-        getName('lalit', (name)=>{
-            console.log('Name:', name);
-            getCources(name, (cources)=>{
-                console.log('Cources', cources);
-                selectedCource(cources, (sc)=>{
-                    console.log('Selcted Cource', sc);
-                })
-            });
+
+        //promice example
+
+        const po = new Promise((resolve, reject)=>{
+            let req = false;
+            if(req){
+                resolve('Success');
+            } else {
+                reject('Failed');
+            }
         });
-        console.log('end');
+
+        po.then(
+            (value)=>console.log(value),
+            (error)=>console.log(error)
+        )
+
+        //promices to avoid callback hell
+
+
     </script>
 </body>
 </html>
