@@ -8,13 +8,34 @@
 <body>
     Hoisting
     <script>
-        getName();
-        console.log(x);
-        var x = 1;
+        //what is hoisting
+        //you can access variables and functions even before initializing it.
+
+        //normal functions
+        // getName();
+        // console.log(a);
+        var a = 1;
         function getName(){
             console.log('Lalit')
         }
+        getName();
+        console.log(a);
         
+        //arrow functions
+        // getName();
+        // console.log(a);
+        // var a = 10;
+        //getName = undefined, in memory creation phase
+        // var getName = () => {
+        //     console.log('lalit');
+        // }
+
+        //function expression
+        //showName = undefined, in memory creation phase
+        // showName();
+        // var showName = function(){
+        //     console.log('lalit')
+        // }
     </script>
 </body>
 </html>
